@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h2>Dashboard</h2>
+    <form action="{% url 'add_record' %}" method="post">
+        {% csrf_token %}
+        <label for="id_number">ID Number:</label>
+        <input type="text" id="id_number" name="ID Number" required><br><br>
+        <label for="name_surname">Name and Surname:</label>
+        <input type="text" id="name_surname" name="NameSurname" required><br><br>
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="Company Name" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="Address" required><br><br>
+        <label for="email_address">Email Address:</label>
+        <input type="email" id="email_address" name="Email Address" required><br><br>
+        <label for="tel_no">Tel No:</label>
+        <input type="text" id="tel_no" name="Tel No" required><br><br>
+        <label for="licence_no">Licence No:</label>
+        <input type="text" id="licence_no" name="Licence No" required><br><br>
+        <input type="submit" value="Add Record">
+    </form>
+    <h3>Generate PDFs</h3>
+    <form action="{% url 'generate_certificate' %}" method="get">
+        <label for="pin_certificate">ID Number:</label>
+        <input type="text" id="pin_certificate" name="pin_number" required><br><br>
+        <input type="submit" value="Generate Certificate">
+    </form>
+    <form action="{% url 'generate_job_card' %}" method="get">
+        <label for="pin_job_card">ID Number:</label>
+        <input type="text" id="pin_job_card" name="pin_number" required><br><br>
+        <input type="submit" value="Generate Job Card">
+    </form>
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

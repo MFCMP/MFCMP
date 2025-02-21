@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "firearm_register"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

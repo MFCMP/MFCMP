@@ -1,0 +1,62 @@
+from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+class CustomUser(AbstractUser):
+    email = models.EmailField(unique=True)
+    id_number = models.CharField(max_length=20)
+    company_name = models.CharField(max_length=100, blank=True)
+    address = models.CharField(max_length=255)
+    tel_no = models.CharField(max_length=15)
+    firearm_licence_no = models.CharField(max_length=50)
+    
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
+class FirearmFitment(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    pin_number = models.CharField(max_length=10)
+    install_date = models.DateField()
+    fabricate = models.CharField(max_length=100)
+    caliber_code = models.CharField(max_length=50)
+    serial_no = models.CharField(max_length=50)
+    new_fitment = models.BooleanField(default=False)
+    verification_status = models.CharField(max_length=20)
+    stolen_lost_status = models.CharField(max_length=20)
+
+class Stock(models.Model):
+    pin_number = models.CharField(max_length=10)
+    description = models.CharField(max_length=255)
+
+class Fitter(models.Model):
+    name = models.CharField(max_length=100)
+    certification = models.CharField(max_length=100)
+
+class FitmentHistory(models.Model):
+    firearm_fitment = models.ForeignKey(FirearmFitment, on_delete=models.CASCADE)
+    date = models.DateField()
+    description = models.TextField()
+
+class ChangeHistory(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    date = models.DateField()
+    description = models.TextField()
+
+class VerificationHistory(models.Model):
+    firearm_fitment = models.ForeignKey(FirearmFitment, on_delete=models.CASCADE)
+    date = models.DateField()
+    description = models.TextField()
+
+class CriminalCase(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    date_reported = models.DateField()
+    saps_case_number = models.CharField(max_length=50)
+    saps_station = models.CharField(max_length=100)
+    investigator = models.CharField(max_length=100)
+    investigator_tel_no = models.CharField(max_length=15)
+    case_notes = models.TextField()
+    recovered = models.BooleanField(default=False)
+    recovery_date = models.DateField(null=True, blank=True)
+    sap13_number = models.CharField(max_length=50, null=True, blank=True)
+    handed_over_to_owner = models.BooleanField(default=False)
+    licence_valid = models.BooleanField(default=False)
+    date_handed_over = models.DateField(null=True, blank=True)

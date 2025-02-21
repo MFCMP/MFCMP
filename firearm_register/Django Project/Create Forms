@@ -1,0 +1,18 @@
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from .models import CustomUser, FirearmFitment, CriminalCase
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+        model = CustomUser
+        fields = ('email', 'first_name', 'last_name', 'id_number', 'company_name', 'address', 'tel_no', 'firearm_licence_no', 'password1', 'password2')
+
+class FirearmFitmentForm(forms.ModelForm):
+    class Meta:
+        model = FirearmFitment
+        fields = ['pin_number', 'install_date', 'fabricate', 'caliber_code', 'serial_no', 'new_fitment', 'verification_status', 'stolen_lost_status']
+
+class CriminalCaseForm(forms.ModelForm):
+    class Meta:
+        model = CriminalCase
+        fields = ['date_reported', 'saps_case_number', 'saps_station', 'investigator', 'investigator_tel_no', 'case_notes', 'recovered', 'recovery_date', 'sap13_number', 'handed_over_to_owner', 'licence_valid', 'date_handed_over']

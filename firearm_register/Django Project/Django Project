@@ -1,0 +1,4 @@
+django-admin startproject firearm_register
+cd firearm_register
+python manage.py startapp main
+pip install django djangorestframework django-allauth

@@ -1,0 +1,12 @@
+from django.contrib import admin
+from django.urls import path, include
+from main.views import register_view, forgot_password_view, fitment_view, criminal_case_view
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
+    path('register/', register_view, name='register'),
+    path('forgot/', forgot_password_view, name='forgot_password'),
+    path('fitment/', fitment_view, name='fitment'),
+    path('criminal_case/', criminal_case_view, name='criminal_case'),
+]
