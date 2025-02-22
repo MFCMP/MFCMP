@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Firearm Installations</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Firearm Installations System</h1>
+
+    <!-- Login Section -->
+    <form id="login-form">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Forgotten Password Section -->
+    <form id="forgot-password-form">
+        <h2>Forgotten Password</h2>
+        <label for="reset-username">Username:</label>
+        <input type="text" id="reset-username" name="reset-username" required>
+        <br>
+        
+        <button type="button" onclick="sendPasswordReset()">Request Password Reset</button>
+    </form>
+
+    <!-- Registration Section -->
+    <form id="registration-form">
+        <h2>Register</h2>
+        <label for="reg-username">Username:</label>
+        <input type="text" id="reg-username" name="reg-username" required>
+        <br>
+        
+        <label for="reg-company">Company Name:</label>
+        <input type="text" id="reg-company" name="reg-company" required>
+        <br>
+        
+        <label for="reg-email">Email Address:</label>
+        <input type="email" id="reg-email" name="reg-email" required>
+        <br>
+        
+        <label for="reg-password">Password:</label>
+        <input type="password" id="reg-password" name="reg-password" required>
+        <br>
+        
+        <label for="reg-confirm-password">Confirm Password:</label>
+        <input type="password" id="reg-confirm-password" name="reg-confirm-password" required>
+        <br>
+        
+        <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+        <label for="privacy-policy">I agree to the terms of the POPIA Act</label>
+        <br>
+        
+        <button type="button" onclick="sendRegistrationRequest()">Register</button>
+    </form>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

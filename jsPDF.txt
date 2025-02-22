@@ -1,0 +1,19 @@
+function generateCertificate() {
+    const doc = new jsPDF();
+    doc.text("Firearm Identification System Certificate", 10, 10);
+    // Add more fields dynamically
+    doc.text("Certificate Number: 12345", 10, 20);
+    doc.text("Issued To: John Doe", 10, 30);
+    doc.text("Date of Issue: 2023-10-01", 10, 40);
+    doc.save("certificate.pdf");
+}
+
+function generateJobCard() {
+    const doc = new jsPDF();
+    doc.text("Job Card: Installation of Microdots", 10, 10);
+    // Add more fields dynamically
+    doc.text("Job Number: 67890", 10, 20);
+    doc.text("Technician: Jane Smith", 10, 30);
+    doc.text("Date: 2023-10-01", 10, 40);
+    doc.save("job-card.pdf");
+}

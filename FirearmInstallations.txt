@@ -1,0 +1,19 @@
+FirearmInstallations/
+│
+├── index.html                <-- Page 1: Login
+├── customer.html             <-- Page 2: Customer
+├── firearm.html              <-- Page 3: Firearm Installations
+├── verification.html         <-- Page 4: Verification
+├── criminal.html             <-- Page 5: Criminal
+├── installation-history.html <-- Page 6: Installation History
+├── verification-history.html <-- Page 7: Verification History
+├── change-history.html       <-- Page 8: Change History
+├── stock.html                <-- Page 9: Stock
+├── admin.html                <-- Page 10: Admin
+├── fitter-names.html         <-- Page 11: Fitter Names
+│
+├── css/
+│   └── styles.css            <-- Your CSS style sheet
+│
+└── js/
+    └── app.js                <-- Your JavaScript file (for navigation, basic search, etc.)

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Admin</h1>
+
+    <table id="admin-table" border="1">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email Address</th>
+                <th>Fitment Centre</th>
+                <th>Password</th>
+                <th>Date Reset Requested</th>
+                <th>New Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data dynamically loaded -->
+        </tbody>
+    </table>
+
+    <button onclick="addUser()">Add User</button>
+    <button onclick="removeUser()">Remove User</button>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Verification</h1>
+
+    <form id="verification-form">
+        <label for="verification-check">Verification:</label>
+        <input type="checkbox" id="verification-check" name="verification-check">
+        <br>
+
+        <label for="scoped-pin-no">Scoped Pin No:</label>
+        <input type="text" id="scoped-pin-no" name="scoped-pin-no" required>
+        <button type="button" onclick="fetchScopedData()">Fetch</button>
+        <br>
+
+        <label for="data-list">Captured Information:</label>
+        <select id="data-list" size="5"></select>
+        <br>
+
+        <label for="verification-date">Verification Date:</label>
+        <input type="date" id="verification-date" name="verification-date">
+        <br>
+
+        <label for="verified-by">Verified By:</label>
+        <select id="verified-by" name="verified-by">
+            <!-- Fitters will be dynamically populated -->
+        </select>
+        <br>
+
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea>
+        <br>
+
+        <button type="button" onclick="toggleOwnershipChange()">Change Ownership</button>
+        <div id="ownership-change-section" style="display: none;">
+            <h2>Ownership Change</h2>
+            <label for="changed-date">Changed Date:</label>
+            <input type="date" id="changed-date" name="changed-date"><br>
+
+            <label for="new-owner">New Owner:</label>
+            <input type="text" id="new-owner" name="new-owner"><br>
+
+            <label for="new-id">New ID No:</label>
+            <input type="text" id="new-id" name="new-id"><br>
+
+            <label for="new-firearm-licence">New Firearm Licence No:</label>
+            <input type="text" id="new-firearm-licence" name="new-firearm-licence"><br>
+
+            <label for="new-company">New Company Name:</label>
+            <input type="text" id="new-company" name="new-company"><br>
+
+            <label for="new-address">New Address:</label>
+            <input type="text" id="new-address" name="new-address"><br>
+
+            <label for="new-email">New Email Address:</label>
+            <input type="email" id="new-email" name="new-email"><br>
+
+            <label for="new-tel">New Tel No:</label>
+            <input type="tel" id="new-tel" name="new-tel"><br>
+
+            <label for="changed-by">Changed By:</label>
+            <input type="text" id="changed-by" name="changed-by"><br>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+
+    <script src="js/verification.js"></script>
+</body>
+</html>

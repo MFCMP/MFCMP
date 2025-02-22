@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Criminal Report</h1>
+
+    <form id="criminal-form">
+        <label for="date-reported">Date Reported:</label>
+        <input type="date" id="date-reported" name="date-reported"><br>
+
+        <label for="case-no">Case No:</label>
+        <input type="text" id="case-no" name="case-no"><br>
+
+        <label for="saps-station">SAPS Station:</label>
+        <input type="text" id="saps-station" name="saps-station"><br>
+
+        <label for="investigator">Investigator:</label>
+        <input type="text" id="investigator" name="investigator"><br>
+
+        <label for="investigator-tel">Investigator Tel No:</label>
+        <input type="tel" id="investigator-tel" name="investigator-tel"><br>
+
+        <label for="case-notes">Case Notes:</label>
+        <textarea id="case-notes" name="case-notes"></textarea><br>
+
+        <label for="recovered">Recovered:</label>
+        <input type="checkbox" id="recovered" name="recovered"><br>
+
+        <label for="recovery-date">Recovery Date:</label>
+        <input type="date" id="recovery-date" name="recovery-date"><br>
+
+        <label for="sap13-no">SAP 13 Number:</label>
+        <input type="text" id="sap13-no" name="sap13-no"><br>
+
+        <label for="handed-over">Handed Over:</label>
+        <input type="radio" id="handed-over-yes" name="handed-over" value="Yes">
+        <label for="handed-over-yes">Yes</label>
+        <input type="radio" id="handed-over-no" name="handed-over" value="No">
+        <label for="handed-over-no">No</label><br>
+
+        <label for="licence-valid">Licence Valid:</label>
+        <input type="radio" id="licence-valid-yes" name="licence-valid" value="Yes">
+        <label for="licence-valid-yes">Yes</label>
+        <input type="radio" id="licence-valid-no" name="licence-valid" value="No">
+        <label for="licence-valid-no">No</label><br>
+
+        <label for="recovery-notes">Recovery Notes:</label>
+        <textarea id="recovery-notes" name="recovery-notes"></textarea><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>
+

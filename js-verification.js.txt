@@ -1,0 +1,41 @@
+// Example fitters (from Page 11: Fitter Names)
+const fitters = ["John Smith", "Jane Doe", "Mark Jones"];
+
+// Populate fitter combo box
+window.addEventListener('DOMContentLoaded', () => {
+    const fitterSelect = document.getElementById('verified-by');
+    fitters.forEach(fitter => {
+        const option = document.createElement('option');
+        option.value = fitter;
+        option.textContent = fitter;
+        fitterSelect.appendChild(option);
+    });
+});
+
+// Fetch data using Scoped Pin No
+function fetchScopedData() {
+    const scopedPinNo = document.getElementById('scoped-pin-no').value;
+
+    if (scopedPinNo) {
+        // Example fetched data (replace with actual backend call)
+        const customerData = ["Name: John Doe", "Company: Firearm Co.", "Tel: 123456789"];
+        const installationData = ["Type: Shotgun", "Serial No: 987654", "Caliber: 12"];
+
+        const dataList = document.getElementById('data-list');
+        dataList.innerHTML = ""; // Clear existing data
+
+        [...customerData, ...installationData].forEach(item => {
+            const option = document.createElement('option');
+            option.textContent = item;
+            dataList.appendChild(option);
+        });
+    } else {
+        alert("Please enter a Scoped Pin No.");
+    }
+}
+
+// Toggle ownership change section visibility
+function toggleOwnershipChange() {
+    const section = document.getElementById('ownership-change-section');
+    section.style.display = section.style.display === 'none' ? 'block' : 'none';
+}

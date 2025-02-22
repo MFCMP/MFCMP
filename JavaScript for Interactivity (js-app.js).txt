@@ -1,0 +1,25 @@
+function searchCustomer() {
+    const customerId = document.getElementById('id-number').value;
+    // Here you would later fetch data from your backend/database
+    alert("Searching for customer with ID: " + customerId);
+}
+
+// Example: Show/hide criminal info when the stolen/lost checkbox is toggled
+document.addEventListener('DOMContentLoaded', function () {
+    const stolenLostBox = document.getElementById('stolen-lost');
+    if (stolenLostBox) {
+        stolenLostBox.addEventListener('change', function () {
+            const criminalInfo = document.getElementById('criminal-info');
+            criminalInfo.style.display = this.checked ? 'block' : 'none';
+        });
+    }
+});
+
+// Placeholder functions for pagination in installations page
+function prevInstallations() {
+    alert("Load the previous 10 installations.");
+}
+
+function nextInstallations() {
+    alert("Load the next 10 installations.");
+}

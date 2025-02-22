@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitter Names</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Fitter Names</h1>
+
+    <table id="fitter-table" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ID No</th>
+                <th>Company</th>
+                <th>Certifications</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data dynamically loaded -->
+        </tbody>
+    </table>
+
+    <button onclick="addFitter()">Add Fitter</button>
+    <button onclick="editFitter()">Edit Fitter</button>
+
+    <script src="js/fitter.js"></script>
+</body>
+</html>

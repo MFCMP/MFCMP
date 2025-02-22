@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installation History</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Installation History</h1>
+
+    <table id="installation-history-table" border="1">
+        <thead>
+            <tr>
+                <th>Fitment Date</th>
+                <th>Customer</th>
+                <th>Pin No</th>
+                <th>Type</th>
+                <th>Fabricate</th>
+                <th>Caliber Code</th>
+                <th>Serial No</th>
+                <th>Fitter</th>
+                <th>Certificate</th>
+                <th>Job Card</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be dynamically inserted by JavaScript -->
+        </tbody>
+    </table>
+
+    <button onclick="printCertificates()">Print Certificates</button>
+    <button onclick="printJobCards()">Print Job Cards</button>
+
+    <script src="js/installation-history.js"></script>
+</body>
+</html>

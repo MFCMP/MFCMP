@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firearm Installations</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Firearm Installations</h1>
+
+    <form id="installation-form">
+        <label for="pin-no">Pin No:</label>
+        <input type="number" id="pin-no" name="pin-no" required>
+        <br>
+
+        <label for="install-date">Install Date:</label>
+        <input type="date" id="install-date" name="install-date" required>
+        <br>
+
+        <label for="fitter">Fitter:</label>
+        <select id="fitter" name="fitter">
+            <!-- Options will be populated dynamically -->
+        </select>
+        <br>
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type">
+        <br>
+
+        <label for="fabricate">Fabricate:</label>
+        <input type="text" id="fabricate" name="fabricate">
+        <br>
+
+        <label for="caliber-code">Caliber Code:</label>
+        <input type="text" id="caliber-code" name="caliber-code">
+        <br>
+
+        <label for="serial-no">Serial No:</label>
+        <input type="text" id="serial-no" name="serial-no">
+        <br>
+
+        <label for="new-fitment">New Fitment:</label>
+        <input type="text" id="new-fitment" name="new-fitment">
+        <br>
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+        <br><br>
+
+        <input type="checkbox" id="stolen-lost" name="stolen-lost">
+        <label for="stolen-lost">Stolen / Lost</label>
+        <br>
+
+        <input type="checkbox" id="verification" name="verification">
+        <label for="verification">Verification</label>
+        <br><br>
+
+        <button type="button" onclick="prevPage()">Previous</button>
+        <button type="button" onclick="nextBatch()">Next 10 Installations</button>
+        <button type="submit">Enter</button>
+        <button type="reset">Cancel</button>
+    </form>
+
+    <script src="js/firearm.js"></script>
+</body>
+</html>
